@@ -1,0 +1,9 @@
+<h1>New shelf form</h1>
+<% form_for @shelf do |f| %>
+  <%=f.label :title %><br/>
+  <%=f.text_field :title %><br/>
+  <%=f.label :description %><br/>
+  <%=f.text_area :description %>
+  <%=f.hidden_field :user_id %><br/>
+  <%=submit_tag "Add Shelf" %>
+<% end %>

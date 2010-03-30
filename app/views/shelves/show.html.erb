@@ -1,0 +1,3 @@
+<h1>Shelf - <%=@shelf.title%></h1>
+<p><%=@shelf.description%></p>
+<p>Created by <%=@shelf.user.login%> about <%=time_ago_in_words(@shelf.created_at)%> ago </p>

@@ -1,0 +1,12 @@
+<div id="shelves">
+  <h1>Shelves</h1>
+  <% @shelves.each do |s| %>
+    <div class="book_shelf">
+      <h3><%=link_to s.title, s%></h3>
+      <p><%=s.description%></p>
+      <p>by <%=s.user.login%></p>
+      <hr/>
+    </div>
+  <% end %>
+</div>
+<%=link_to "New Shelf", new_shelf_path%>

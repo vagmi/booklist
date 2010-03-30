@@ -1,0 +1,13 @@
+<div id="login_form">
+  <% form_for @user_session do |f| %>
+    <%=f.error_messages %>
+    <%=f.label :login%><br/>
+    <%=f.text_field :login %><br/>
+    <%=f.label :password %><br/>
+    <%=f.password_field :password %><br/>
+    <% if @return_path %>
+      <%=hidden_field_tag :return_path,@return_path%>
+    <% end %>
+    <%=submit_tag "Login"%>
+  <% end %>
+</div>
